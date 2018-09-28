@@ -44,9 +44,11 @@ services:
     volumes:
       - ./pipeline/:/usr/share/logstash/pipeline/
       - ${LOCAL_DIR}:${LOGSTASH_DIR}
+      - ${LOCAL_TMP}:${LOGSTASH_TMP}
     environment:
       - 'config.reload.automatic=true'
       - LOGSTASH_DIR=${LOGSTASH_DIR}
+      - LOGSTASH_TMP=${LOGSTASH_TMP}
     ports: ['9600:9600']
     networks: ['esnet']
     depends_on:

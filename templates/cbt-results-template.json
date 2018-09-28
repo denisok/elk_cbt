@@ -1,0 +1,24 @@
+{
+  "index_patterns": ["cbt-results*"],
+  "mappings": {
+    "doc": {
+      "_source": {
+        "enabled": true
+      },
+      "properties": {
+        "bs": {
+          "type": "integer"
+        },
+        "ra": {
+          "type": "integer"
+        },
+        "procs_vols": {
+          "type": "integer"
+        },
+        "iter": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
