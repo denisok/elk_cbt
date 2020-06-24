@@ -13,7 +13,8 @@ So far parses only [cbt](https://github.com/ceph/cbt/) results.
   * tag - tag name or milestome name
   * cluster - stable cluster config name - so you could identify what cluster you used for this test
   * result_desc - additional info about test - maybe some additional parameters that aren't tracked in fio results
-* copy your cbt results directory to LOGSTASH_DIR
+* create directories *rados* and *librbd* under LOGSTASH_DIR
+* copy your cbt results directory to *LOGSTASH_DIR/rados* or to *LOGSTASH_DIR/librbd*
 * **be aware** - logstash will delete all imported json files
 * go to Kibana interface in web browser http://your_host:5601 (usually localhost)
 * don't forget to change Time Filter in the right corner to something more sane (defaults to 15 Min) - maybe to "Year to date"
